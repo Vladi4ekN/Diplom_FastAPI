@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать, любители книг!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #9BCD9B;
+            text-align: center;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        #greeting {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать, любители книг!</h1>
+    <h2>Ниже, вы сможете выбрать популярные сайты и выбрать книгу по душе!</h2>
+    <p>Приятного чтения!</p>
+    <form action="/greet" method="post">
+        <input type="text" name="username" placeholder="Введите ваше имя" required>
+        <button type="submit" class="button">Приветствие</button>
+    </form>
+    <div id="greeting">{{ greeting }}</div>
+    <a href="https://www.bookvoed.ru/?ysclid=m2utrlv32g363030526" class="button">Буквоед</a>
+    <a href="https://dk-spb.ru/?ysclid=m2utsvbbr317777375" class="button">Дом книг</a>
+    <a href="https://www.chitai-gorod.ru/?ysclid=m2uttt1zka590744434" class="button">Читай-город</a>
+</body>
+</html>
